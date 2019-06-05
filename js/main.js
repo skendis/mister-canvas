@@ -18,7 +18,7 @@ function onInit() {
     gCanvas = document.querySelector('#paintCanvas');
     gCtx = gCanvas.getContext('2d')
     gCanvas.width = window.innerWidth;
-    gCanvas.height = window.innerHeight-50;
+    gCanvas.height = window.innerHeight - 50;
 
     gCanvas.addEventListener("mousemove", function (e) {
         findxy('move', e)
@@ -56,6 +56,35 @@ function draw() {
     gCtx.lineWidth = brushSize;
     gCtx.stroke();
     gCtx.closePath();
+}
+
+function drawRect() {
+    gCtx.rect(currX, currY, 300, 400);
+    gCtx.strokeStyle = brushColor;
+    gCtx.lineWidth = brushSize;
+    gCtx.stroke();
+}
+
+function drawTriangle() {
+    gCtx.beginPath();
+    gCtx.moveTo(prevX, prevY);
+    gCtx.lineTo(300, 150);
+    gCtx.lineTo(100, 100);
+    gCtx.closePath()
+
+    gCtx.lineWidth = 5;
+    gCtx.strokeStyle = 'blue'
+    gCtx.fillStyle = '#ff0000'
+
+    gCtx.stroke();
+    gCtx.fill()
+
+}
+function drawRect() {
+    gCtx.rect(currX, currY, 150, 100);
+    gCtx.strokeStyle = brushColor;
+    gCtx.lineWidth = brushSize;
+    gCtx.stroke();
 }
 
 
@@ -98,7 +127,7 @@ function findxy(res, e) {
             prevY = currY;
             currX = e.clientX - gCanvas.offsetLeft;
             currY = e.clientY - gCanvas.offsetTop;
-            draw();
+            drawRect();
         }
     }
 }
