@@ -10,7 +10,7 @@
 </head>
 
 <body onload="onInit()">
-    <header class="container flex direction-col">
+    <header class="container flex justify-center align-center space-between">
         <h1>MisterCanvas</h1>
         <form>
             <label for="brushColor">brush color:</label>
@@ -37,6 +37,7 @@
             <input type="button" value="save" onclick="save()">
             <input type="button" onclick="erase()" value="clear">
             <input type="button" value="about">
+            <a href="#" onclick="downloadCanvas(this)" download="">Download</a>
         </form>
     </header>
     <canvas id="paintCanvas">

@@ -18,7 +18,7 @@ function onInit() {
     gCanvas = document.querySelector('#paintCanvas');
     gCtx = gCanvas.getContext('2d')
     gCanvas.width = window.innerWidth;
-    gCanvas.height = window.innerHeight;
+    gCanvas.height = window.innerHeight-50;
 
     gCanvas.addEventListener("mousemove", function (e) {
         findxy('move', e)
@@ -58,14 +58,20 @@ function draw() {
     gCtx.closePath();
 }
 
+
+
 function erase() {
     gCtx.clearRect(0, 0, gCanvas.width, gCanvas.height);
 }
 
-function save() {
 
+
+function downloadCanvas(elLink) {
+    console.log("download")
+    const data = gCanvas.toDataURL();
+    elLink.href = data;
+    elLink.download = 'my-img.jpg';
 }
-
 function findxy(res, e) {
     if (res == 'down') {
         prevX = currX;
