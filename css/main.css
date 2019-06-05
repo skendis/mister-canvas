@@ -2,3 +2,36 @@
     padding: 0;
     margin: 0;
 }
+body{
+    font-family:sans-serif;
+}
+h1,h2,p{
+    font-weight: 100;
+}
+
+
+
+
+
+
+
+
+
+
+/* HELPERS */
+.container{
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+.flex{
+    display: flex;
+}
+.justify-center{
+    justify-content: center;
+}
+.align-center{
+    align-items: center;
+}
+.direction-col{
+    flex-direction: column;
+}

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +8,38 @@
     <link rel="stylesheet" href="css/main.css">
     <title>mister-canvas</title>
 </head>
+
 <body>
-    <h1>hello</h1>
-    
+    <header class="container flex direction-col">
+        <h1>MisterCanvas</h1>
+        <form>
+            <label for="brushColor">brush color:</label>
+            <input type="color" name="brushColor" id="brushColor">
+            <label for="bgColor">bg color:</label>
+            <input type="color" name="bgColor" id="bgColor">
+            <label for="shape">shape:</label>
+            <select name="shape" id="shape">
+                <option id="0">SKETCHY</option>
+                <option id="1">SHADED</option>
+                <option id="2">CHROME</option>
+                <option id="3">FUR</option>
+                <option id="4">LONGFUR</option>
+                <option id="5">WEB</option>
+                <option id="6"></option>
+                <option id="7">SIMPLE</option>
+                <option id="8">SQUARES</option>
+                <option id="9">RIBBON</option>
+                <option id="10"></option>
+                <option id="11">CIRCLES</option>
+                <option id="12">GRID</option>
+            </select>
+            <input type="button" value="save">
+            <input type="button" value="clear">
+            <input type="button" value="about">
+        </form>
+    </header>
+    <canvas id="paintCanvas"></canvas>
     <script src="js/main.js"></script>
 </body>
+
 </html>
