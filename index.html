@@ -14,9 +14,9 @@
         <h1>MisterCanvas</h1>
         <form>
             <label for="brushColor">brush color:</label>
-            <input type="color" name="brushColor" id="brushColor">
+            <input type="color" name="brushColor" id="brushColor" onchange="setColor(this)">
             <label for="bgColor">bg color:</label>
-            <input type="color" name="bgColor" id="bgColor">
+            <input type="color" name="bgColor" id="bgColor" onchange="setBgCanvas(this)">
             <label for="shape">shape:</label>
             <select name="shape" id="shape">
                 <option id="0">SKETCHY</option>
@@ -33,8 +33,9 @@
                 <option id="11">CIRCLES</option>
                 <option id="12">GRID</option>
             </select>
-            <input type="button" value="save">
-            <input type="button" value="clear">
+            <input type="range" name="brushSize" id="brushSize" onchange="setBrushSize(this)" min="2" max="20" value="2">
+            <input type="button" value="save" onclick="save()">
+            <input type="button" onclick="erase()" value="clear">
             <input type="button" value="about">
         </form>
     </header>
