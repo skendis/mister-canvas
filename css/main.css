@@ -9,12 +9,20 @@ h1,h2,p{
     font-weight: 100;
 }
 
+header{
+    position: fixed;
+    top:0;
+    right:0;
+    left:0;
+    background-color: lightcoral;
+}
 
 
 
 
-
-
+#paintCanvas{
+    border: 1px solid orangered;
+}
 
 
 
